@@ -1,4 +1,4 @@
-package com.example.gb_3_weather.view
+package com.example.gb_3_weather.view.details
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,20 +8,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import com.example.gb_3_weather.R
-import com.example.gb_3_weather.databinding.MainFragmentBinding
+import com.example.gb_3_weather.databinding.FragmentDetailsBinding
 import com.example.gb_3_weather.model.Weather
 import com.example.gb_3_weather.viewmodel.AppState
 import com.example.gb_3_weather.viewmodel.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 
-class MainFragment : Fragment() {
+class DetailsFragment : Fragment() {
 
-    private var _binding: MainFragmentBinding? = null
+/*
+    private var _binding: FragmentDetailsBinding? = null
     private val binding get() = _binding!!
 
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = DetailsFragment()
     }
 
     private lateinit var viewModel: MainViewModel
@@ -30,7 +31,7 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = MainFragmentBinding.inflate(inflater, container, false)
+        _binding = FragmentDetailsBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -44,7 +45,8 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         viewModel.getLiveData().observe(viewLifecycleOwner, Observer { renderData(it) })
-        viewModel.getWeatherFromLocalSource()
+        viewModel.getWeatherFromLocalSourceRus()
+
     }
 
     private fun renderData(appState: AppState) {
@@ -62,7 +64,8 @@ class MainFragment : Fragment() {
                 binding.loadingLayout.visibility = View.GONE
                 Snackbar
                     .make(binding.mainView, "Error", Snackbar.LENGTH_INDEFINITE)
-                    .setAction("Reload") { viewModel.getWeatherFromLocalSource() }
+                    .setAction("Reload") { viewModel.getWeatherFromLocalSourceRus()
+                    }
                     .show()
             }
         }
@@ -78,5 +81,6 @@ class MainFragment : Fragment() {
         binding.temperatureValue.text = weatherData.temperature.toString()
         binding.feelsLikeValue.text = weatherData.feelsLike.toString()
     }
+*/
 
 }

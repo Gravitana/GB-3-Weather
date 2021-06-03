@@ -3,6 +3,7 @@ package com.example.gb_3_weather.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.gb_3_weather.R
+import com.example.gb_3_weather.view.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
