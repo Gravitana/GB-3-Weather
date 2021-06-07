@@ -40,7 +40,7 @@ android {
 
 /*
 repositories {
-    jcenter()
+    jcenter() // для spots-dialog
 }
 */
 dependencies {
