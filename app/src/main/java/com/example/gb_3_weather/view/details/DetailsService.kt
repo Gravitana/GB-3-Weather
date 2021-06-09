@@ -7,7 +7,6 @@ import androidx.annotation.RequiresApi
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.example.gb_3_weather.BuildConfig
 import com.example.gb_3_weather.model.WeatherDTO
-import com.example.gb_3_weather.view.details.*
 import com.google.gson.Gson
 import java.io.BufferedReader
 import java.io.InputStreamReader
